@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+
 nav{
   background: #475151;
   height: 80px;
@@ -20,7 +21,7 @@ nav{
 }
 nav ul{
   float: right;
-  margin-right: 20px;
+  margin-right: 70px;
 }
 li.other-button {
   margin-left: 20px;
@@ -32,9 +33,8 @@ nav ul li{
   
 }
 nav ul li a{
-  color: #fff;
-  font-size: 16px;
-  padding: 10px 10px;
+  color: #fff; 
+  padding: 10px 8px;
   border-radius: 3px;
   text-transform: uppercase;
   text-decoration: none;
@@ -63,18 +63,90 @@ section{
   height: calc(100vh - 80px);
 }
 
+.searchBar {
+  position: relative;
+  cursor: pointer;
+}
+
+.searchBarIcon {
+  position: relative;
+  left: -25px;
+  top: -8px;
+}
+
+.searchBar input {
+  margin-left: 35%;
+  width: 40vw;
+  max-width: 400px;
+  height: 1.5rem;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid;
+  padding: 0 5px 0 25px;
+  color: rgb(150, 137, 137);
+  transition: border-color 0.2s;
+}
+
+.searchBar input:focus {
+  border-color: #5aa3c2;
+  z-index: 2;
+}
+
+.searchBar input::placeholder {
+  font-size: 0.9rem;
+  color: rgb(80, 70, 70);
+}
+
+.iconAnimation:hover {
+  color: #21DBC8;
+  cursor: pointer;
+  animation: rotate-icons 1s;
+}
+
+@keyframes rotate-icons {
+  0% { 
+      transform: rotate(0deg);
+  }
+
+  40% {
+      transform: rotate(50deg);
+  }
+
+  80% {
+      transform: rotate(-50deg);
+  }
+
+  100% {
+      transform: rotate(0);
+  }
+}
+
+
+
 @media (max-width: 952px){
   .enlace{
       padding-left: 20px;
   }
   nav ul li a{
       font-size: 16px;
+      padding: 5px 5px;
+  }
+  nav ul li {
+    margin: 0 0px;
   }
 }
+
 
 @media (max-width: 858px){
   .checkbtn{
       display: block;
+  }
+  .searchBar input{
+    height: 30px;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 30%;
   }
   ul{
       position: fixed;
@@ -86,10 +158,11 @@ section{
       margin-left: -50px;
       text-align: center;
       transition: all 1s;
+      z-index: 1;
   }
   nav ul li{
       display: block;
-      margin: 16px;
+      margin: 10px;
       line-height: 30px;
   }
   nav ul li a{
