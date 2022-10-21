@@ -66,6 +66,7 @@ section{
 .searchBar {
   position: relative;
   cursor: pointer;
+  margin-left: 50px;
 }
 
 .searchBarIcon {

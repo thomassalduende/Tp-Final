@@ -1,10 +1,7 @@
 import logo from '../assets/logo.png'
 import '../Styles/Header.css'
 import styles from '../Styles/Header.css'
-import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart, FaUserAlt, FaHouseUser } from "react-icons/fa";
-import { AiTwotoneSetting } from "react-icons/ai";
-import { RiLogoutBoxLine } from "react-icons/ri";
 const Header = () => {
   return ( 
     <nav>
@@ -27,13 +24,8 @@ const Header = () => {
             <li><a className="fs-6 fw-bold" href="#">Ingresar</a></li>
             <li><a className="fs-6 fw-bold" href="#">Favoritos</a></li>
             <li><FaShoppingCart className={styles.iconAnimation}/></li>
-            <li><FaHouseUser className={`${styles.iconAnimation} ${styles.userMenuIn}`}/></li>
-            
+            <li><FaHouseUser className={`${styles.iconAnimation} ${styles.userMenuIn}`}/></li> 
         </ul>
-        <li className="searchBar">
-          <input type="text" placeholder="Buscar..." />
-          <FaSearch className="searchBarIcon"/>
-        </li>
     </nav>
 
     
